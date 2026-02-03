@@ -49,9 +49,9 @@
   #araCarousel .ara-carousel-arrow,
   #araCarousel button.ara-carousel-arrow {
     all: unset;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
     width: 48px !important;
     height: 48px !important;
     min-width: 48px !important;
@@ -92,11 +92,13 @@
   }
 
   #araCarousel .ara-carousel-arrow-prev {
-    left: 16px;
+    left: 16px !important;
+    right: auto !important;
   }
 
   #araCarousel .ara-carousel-arrow-next {
-    right: 16px;
+    right: 16px !important;
+    left: auto !important;
   }
 
   #araCarousel .ara-carousel-arrow::before {
@@ -199,11 +201,11 @@
     }
 
     #araCarousel .ara-carousel-arrow-prev {
-      left: 10px;
+      left: 10px !important;
     }
 
     #araCarousel .ara-carousel-arrow-next {
-      right: 10px;
+      right: 10px !important;
     }
   }
 </style>
