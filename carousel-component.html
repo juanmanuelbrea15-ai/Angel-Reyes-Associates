@@ -45,57 +45,78 @@
     margin: 0;
   }
 
-  /* Navigation Arrows */
-  .ara-carousel-arrow {
+  /* Navigation Arrows - Reset and override global styles */
+  #araCarousel .ara-carousel-arrow,
+  #araCarousel button.ara-carousel-arrow {
+    all: unset;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 48px;
-    height: 48px;
-    background: white;
-    border: none;
-    border-radius: 50%;
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+    max-width: 48px !important;
+    max-height: 48px !important;
+    background: white !important;
+    background-color: white !important;
+    border: none !important;
+    border-radius: 50% !important;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     z-index: 10;
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+    font-size: 0 !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+    box-sizing: border-box !important;
   }
 
-  .ara-carousel-arrow:hover {
+  #araCarousel .ara-carousel-arrow:hover,
+  #araCarousel button.ara-carousel-arrow:hover {
     transform: translateY(-50%) scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+    background: white !important;
+    background-color: white !important;
   }
 
-  .ara-carousel-arrow:active {
+  #araCarousel .ara-carousel-arrow:active,
+  #araCarousel button.ara-carousel-arrow:active {
     transform: translateY(-50%) scale(0.95);
   }
 
-  .ara-carousel-arrow-prev {
+  #araCarousel .ara-carousel-arrow-prev {
     left: 16px;
   }
 
-  .ara-carousel-arrow-next {
+  #araCarousel .ara-carousel-arrow-next {
     right: 16px;
   }
 
-  .ara-carousel-arrow::before {
-    content: '';
-    width: 12px;
-    height: 12px;
-    border-right: 3px solid #1a1a2e;
-    border-bottom: 3px solid #1a1a2e;
-    display: block;
+  #araCarousel .ara-carousel-arrow::before {
+    content: '' !important;
+    width: 12px !important;
+    height: 12px !important;
+    border-right: 3px solid #1a1a2e !important;
+    border-bottom: 3px solid #1a1a2e !important;
+    border-top: none !important;
+    border-left: none !important;
+    display: block !important;
+    background: transparent !important;
   }
 
-  .ara-carousel-arrow-prev::before {
+  #araCarousel .ara-carousel-arrow-prev::before {
     transform: rotate(135deg);
     margin-left: 4px;
   }
 
-  .ara-carousel-arrow-next::before {
+  #araCarousel .ara-carousel-arrow-next::before {
     transform: rotate(-45deg);
     margin-right: 4px;
   }
@@ -112,24 +133,34 @@
     z-index: 10;
   }
 
-  .ara-carousel-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 4px;
-    background: rgba(255, 255, 255, 0.5);
-    border: none;
+  #araCarousel .ara-carousel-dot,
+  #araCarousel button.ara-carousel-dot {
+    all: unset;
+    width: 8px !important;
+    height: 8px !important;
+    min-width: 8px !important;
+    min-height: 8px !important;
+    border-radius: 4px !important;
+    background: rgba(255, 255, 255, 0.5) !important;
+    border: none !important;
     cursor: pointer;
-    padding: 0;
+    padding: 0 !important;
+    margin: 0 !important;
     transition: all 0.3s ease;
+    box-sizing: border-box !important;
+    display: block !important;
   }
 
-  .ara-carousel-dot:hover {
-    background: rgba(255, 255, 255, 0.8);
+  #araCarousel .ara-carousel-dot:hover,
+  #araCarousel button.ara-carousel-dot:hover {
+    background: rgba(255, 255, 255, 0.8) !important;
   }
 
-  .ara-carousel-dot.active {
-    width: 24px;
-    background: white;
+  #araCarousel .ara-carousel-dot.active,
+  #araCarousel button.ara-carousel-dot.active {
+    width: 24px !important;
+    min-width: 24px !important;
+    background: white !important;
   }
 
   /* Auto-play indicator (optional) */
@@ -151,22 +182,27 @@
       left: 20px;
     }
 
-    .ara-carousel-arrow {
-      width: 40px;
-      height: 40px;
+    #araCarousel .ara-carousel-arrow,
+    #araCarousel button.ara-carousel-arrow {
+      width: 40px !important;
+      height: 40px !important;
+      min-width: 40px !important;
+      min-height: 40px !important;
+      max-width: 40px !important;
+      max-height: 40px !important;
     }
 
-    .ara-carousel-arrow::before {
-      width: 10px;
-      height: 10px;
-      border-width: 2px;
+    #araCarousel .ara-carousel-arrow::before {
+      width: 10px !important;
+      height: 10px !important;
+      border-width: 2px !important;
     }
 
-    .ara-carousel-arrow-prev {
+    #araCarousel .ara-carousel-arrow-prev {
       left: 10px;
     }
 
-    .ara-carousel-arrow-next {
+    #araCarousel .ara-carousel-arrow-next {
       right: 10px;
     }
   }
