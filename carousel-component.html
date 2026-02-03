@@ -81,12 +81,23 @@
     right: 16px;
   }
 
-  .ara-carousel-arrow svg {
-    width: 20px;
-    height: 20px;
-    stroke: #1a1a2e;
-    stroke-width: 2.5;
-    fill: none;
+  .ara-carousel-arrow::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-right: 3px solid #1a1a2e;
+    border-bottom: 3px solid #1a1a2e;
+    display: block;
+  }
+
+  .ara-carousel-arrow-prev::before {
+    transform: rotate(135deg);
+    margin-left: 4px;
+  }
+
+  .ara-carousel-arrow-next::before {
+    transform: rotate(-45deg);
+    margin-right: 4px;
   }
 
   /* Dot Indicators */
@@ -145,9 +156,10 @@
       height: 40px;
     }
 
-    .ara-carousel-arrow svg {
-      width: 16px;
-      height: 16px;
+    .ara-carousel-arrow::before {
+      width: 10px;
+      height: 10px;
+      border-width: 2px;
     }
 
     .ara-carousel-arrow-prev {
@@ -186,16 +198,8 @@
     </div>
 
     <!-- Navigation Arrows -->
-    <button class="ara-carousel-arrow ara-carousel-arrow-prev" id="araPrev" aria-label="Previous slide">
-      <svg viewBox="0 0 24 24">
-        <polyline points="15 18 9 12 15 6"></polyline>
-      </svg>
-    </button>
-    <button class="ara-carousel-arrow ara-carousel-arrow-next" id="araNext" aria-label="Next slide">
-      <svg viewBox="0 0 24 24">
-        <polyline points="9 6 15 12 9 18"></polyline>
-      </svg>
-    </button>
+    <button class="ara-carousel-arrow ara-carousel-arrow-prev" id="araPrev" aria-label="Previous slide"></button>
+    <button class="ara-carousel-arrow ara-carousel-arrow-next" id="araNext" aria-label="Next slide"></button>
 
     <!-- Dot Indicators -->
     <div class="ara-carousel-dots" id="araCarouselDots"></div>
